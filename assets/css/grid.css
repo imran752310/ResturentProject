@@ -1,0 +1,56 @@
+.container {
+  max-width: 1140px;
+  padding: 10px;
+  margin: 0 auto;
+}
+.D-flex {
+  display: flex;
+  padding: 5px 0px;
+}
+.col-1-of-4 {
+  flex: 0 0 25%;
+  overflow: hidden;
+}
+.col-3-of-4 {
+  flex: 0 0 75%;
+}
+/* =====Grid======= */
+.gridItemOne {
+  grid-area: sidebar;
+}
+.gridItemTwo {
+  grid-area: oneOfThreeImage1;
+
+  grid-area: oneOfThreeImage2;
+}
+.gridItemFour {
+  grid-area: oneOfThreeImage3;
+}
+.gridItemFive {
+  grid-area: oneOfTwo1;
+}
+.gridItemSix {
+  grid-area: oneOfTwo2;
+}
+.gridItemSeven {
+  grid-area: fullBanner;
+}
+.allRecipes .gridContainer {
+  display: grid;
+  grid-template-columns: /*1fr 1fr 1fr 1fr;*/ 100px 200px;
+  grid-template-areas:
+    "sidebar oneOfThreeImage1 oneOfThreeImage1 oneOfThreeImage2 oneOfThreeImage2 oneOfThreeImage3 oneOfThreeImage3"
+    "sidebar  oneOfTwo1    oneOfTwo1  oneOfTwo1   oneOfTwo2  oneOfTwo2  oneOfTwo2"
+    "fullBanner  fullBanner  fullBanner fullBanner fullBanner  fullBanner  fullBanner";
+  grid-gap: 25px 15px;
+  align-items: center;
+}
+
+@media (max-width: 567px) {
+  .searchBox input {
+    width: 250px;
+  }
+  .D-flex {
+    display: block;
+  }
+}
